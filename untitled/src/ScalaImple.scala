@@ -38,6 +38,15 @@ class ScalaImple {
     val res1 = hm.get(str)
     res1(random.nextInt(res1.size))
   }
-  
+
+  def generate(str: String):String ={
+    
+    val arr = str.split(" ")
+    var res = ""
+    for(i<- 0 to arr.length-1) {
+      res += pickOutFollowingWord(arr(i))
+    }
+    res
+  }
 
 }
